@@ -23,10 +23,10 @@ cols = ['Nome',
         'Tipo de Aposentadoria',
         'Fundamentação da inatividade',
         'Nome Diploma Legal',
-        'Data publicação do Diploma Legal',
+        'Data_diploma_legal',
         'Ocorrência de ingresso no serviço público',
-        'Data de ocorrência de ingresso no serviço público',
-        'Rendimento líquido'
+        'Data_ingresso_serv_publico',
+        'Rendimento_liq'
         ]
 df = []
 for file in files:
