@@ -58,3 +58,16 @@ df_abono = pd.concat(df)
 df_abono = df_abono[df_abono['Nome'] != 'Nome']
 
 print(df_abono.head())
+# %%
+anos_ab = ['2017', '2018', '2019', '2020']
+df_abonos = []
+for i in range(0,4):
+    dir =  r'./dataset/Datasets/Abono{}'.format(anos_ab[i])
+    files = glob.glob(dir + "/*.csv")
+    df = []
+    dfs = []
+    for i in range(len(files)):
+        df.append(pd.read_csv(files[i], encoding='Latin1',sep=';', index_col=False, on_bad_lines = 'skip'))
+    dfs = pd.concat(df)
+    dfs = dfs[dfs['Nome'] != 'Nome']
+    df_abonos.append(dfs)
